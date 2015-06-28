@@ -7,18 +7,11 @@ export default class MessageList extends React.Component {
 		super(props);
 	}
 
-	// WORKAROUND: =====
-	onItemClicked(item) {
-		this.props.onItemSelected(item);
-	}
-	// ==================
-
 	render() {
 		return (
 			<div>
 				{this.props.items.map((item) => {
-					return <p key={item} onClick={this.onItemClicked.bind(this, item)}>{item}</p>
-					// return <p key={item} onClick={this.props.onItemClicked.bind(this, item)}>{item}</p>
+					return <p key={item} onClick={() => this.props.onItemSelected(item)}>{item}</p>
 				})
 				}
 			</div>

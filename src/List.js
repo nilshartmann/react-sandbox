@@ -9,8 +9,6 @@ export default class List extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.selectionChange = this.selectionChange.bind(this);
-
 		this.state = {
 			selection: null
 		}
