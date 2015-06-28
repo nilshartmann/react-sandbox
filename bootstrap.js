@@ -1,5 +1,5 @@
 import React from 'react';
-import HelloMessage from './src/HelloMessage';
+import List from './src/List';
 
 var mountNode = document.getElementById('example');
-React.render(<HelloMessage greeting="Hello" />, mountNode);
+React.render(<List />, mountNode);
